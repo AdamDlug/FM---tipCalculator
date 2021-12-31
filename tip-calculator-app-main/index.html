@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); font-size: 11px; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="calculator">
+    <div class="container">
+      <h1>SPLI<br>TTER</h1>
+      <div class="wrapper">
+        <div class="wrapper-selectSection">
+          <!-- informacje o rachunku -->
+          <div class="bill-section">
+            <p class="mainP">Bill</p>
+            <div id="TestoweID" class="info-display">  
+              <img src="images/icon-dollar.svg" alt="$">
+              <input id="BillValueSpan" class="info-value billStyle" value="0" type="number">
+              <!-- <span id="BillValueSpan" class="info-value">142.55</span> -->
+            </div>
+          </div>
+          <!-- wybor napiwku -->
+          <div class="tip-section">
+            <p class="mainP">Select Tip %</p>
+            <div id="Tip5" class="tip-value">5</div>
+            <div id="Tip10" class="tip-value">10</div>
+            <div id="Tip15" class="tip-value">15</div>
+            <div id="Tip25" class="tip-value">25</div>
+            <div id="Tip50" class="tip-value">50</div>
+            <input id="TipValueSpan" class="info-value custom-tip-value" type="number" placeholder="Custom">
+          </div>
+          <!-- liczba osob do podzialu -->
+          <div class="amountOfPeople-section">
+            <div class="bill-section-paragraph">
+              <p class="mainP">Number of People</p>
+              <span id="CantBeZeroSpanID" class="cantBeZeroSpan">Can't be zero</span>
+            </div>
+            <div class="info-display people">
+              <label class="label-style" for="NumOfPeople"><img src="images/icon-person.svg" alt="person"></label>
+              <input id="NuberOfPeopleInput" class="info-value billStyle" type="number" value="0">          
+            </div>
+          </div>
+        </div>
+        <!-- czesc podsumowujaca -->
+        <div class="wrapper-summarySection">
+          <!-- informacja o napiwku -->
+          <div class="summary-separator">
+            <div class="summary">
+              <div class="summary-text">
+                <p class="summary-text-description">Tip Amount</p>
+                <p class="summary-text-addInfo">/ person</p>
+              </div> 
+                <span id="TipAmountSpan">0</span>
+            </div>
+            <!-- informacja o rachunku na osobe -->
+            <div class="summary">
+              <div class="summary-text">
+                <p class="summary-text-description">Total</p>
+                <p class="summary-text-addInfo">/ person</p>
+              </div>
+              <span id="TotalPerPersonSpan">0</span>
+            </div>
+          </div>
+          <!-- przycisk reset -->
+          <div id="ResBtt" class="resetButton">RESET</div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/AdamDlug" target="_blank">Adam Dlug</a>.
+      </div>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Space Mono;
+    font-size: 24px;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 375px;
+    background-color: hsl(185, 41%, 84%);
+    justify-content: center;
+    align-content: center;
+    
+}
+h1 {
+    padding: 20px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    letter-spacing: .4em;
+    text-align: center;
+}
+.wrapper {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1em 1em 0 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+.wrapper-selectSection {
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.bill-section-paragraph{
+    display: flex;
+    justify-content: space-between;
+}
+.mainP {
+    font-size: 0.6em;
+    font-weight: 600;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: .3em;
+}
+.cantBeZeroSpan {
+    font-size: 0.6em;
+    font-weight: 600;
+    color: hsl(4, 90%, 49%);
+    margin-bottom: .3em; 
+}
+.moreThanZeroSpan {
+    display: none; 
+}
+.info-display {
+    background-color: hsl(189, 41%, 97%);
+    border-radius: .2em;
+    padding: 0 .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .info-value {
+        font-weight: 700;
+        background-color: hsl(189, 41%, 97%);
+        color: hsl(183, 100%, 15%);
+    }
+    .billStyle {
+        border: none;
+        outline: none;
+        text-align: right;
+        width: calc(300px);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
+.wartosc-poprawna {
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.wartosc-niepoprawna {
+    border: 2px solid red;
+}
+.tip-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "description description";
+    padding: .5em 0;
+    gap: .5em;
+    p {
+        grid-area: description;
+    }
+    .tip-value {
+        background-color: hsl(183, 100%, 15%);
+        color: hsl(189, 41%, 97%);
+        text-align: center;
+        border-radius: .2em;
+        &:hover {
+            background-color: hsl(185, 41%, 84%);
+            cursor: pointer;
+            color: hsl(183, 100%, 15%);
+        }
+    }
+    .custom-tip-value {
+        outline: none;
+        border: none;
+        width: 145px;
+        background-color: hsl(189, 41%, 97%);
+        color: hsl(186, 14%, 43%);
+        font-weight: 700;
+        text-align: center;
+        padding-right: 0.5em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.wrapper-summarySection {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: .5em;
+    padding: 1.7em 1em 1em 1em;
+    display: grid;
+    gap: 1em;
+}
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .summary-text-addInfo {
+        font-size: .5em;
+        color: hsl(184, 14%, 56%);
+    }
+    .summary-text-description {
+        font-size: .6em;
+        font-weight: 700;
+        color: hsl(189, 41%, 97%);
+    }
+    span {
+        font-weight: 700;
+        color: hsl(172, 67%, 45%);
+    }
+}
+.resetButton {
+    text-align: center;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: .2em;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    height: fit-content;
+
+    &:hover {
+        background-color: hsl(185, 41%, 84%);
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: 800px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        border-radius: 1em;
+    } 
+    .summary {
+        margin-bottom: 2em;
+    }
+    .wrapper-summarySection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+    }
+    .tip-section {
+        .custom-tip-value {
+            width: 160px;
+        }
+    }
+    
+}

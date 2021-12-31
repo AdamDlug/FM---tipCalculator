@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Space Mono;
+  font-size: 24px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 375px;
+      grid-template-columns: 375px;
+  background-color: #c5e4e7;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+h1 {
+  padding: 20px;
+  font-weight: 700;
+  color: #00494d;
+  letter-spacing: .4em;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: white;
+  border-radius: 1em 1em 0 0;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2em;
+}
+
+.wrapper-selectSection {
+  border-radius: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.bill-section-paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainP {
+  font-size: 0.6em;
+  font-weight: 600;
+  color: #5e7a7d;
+  margin-bottom: .3em;
+}
+
+.cantBeZeroSpan {
+  font-size: 0.6em;
+  font-weight: 600;
+  color: #ed1b0c;
+  margin-bottom: .3em;
+}
+
+.moreThanZeroSpan {
+  display: none;
+}
+
+.info-display {
+  background-color: #f4fafa;
+  border-radius: .2em;
+  padding: 0 .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.info-display .info-value {
+  font-weight: 700;
+  background-color: #f4fafa;
+  color: #00494d;
+}
+
+.info-display .billStyle {
+  border: none;
+  outline: none;
+  text-align: right;
+  width: calc(300px);
+}
+
+.info-display .billStyle:hover {
+  cursor: pointer;
+}
+
+.wartosc-poprawna {
+  border: 2px solid #26c0ab;
+}
+
+.wartosc-niepoprawna {
+  border: 2px solid red;
+}
+
+.tip-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "description description";
+  padding: .5em 0;
+  gap: .5em;
+}
+
+.tip-section p {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: description;
+}
+
+.tip-section .tip-value {
+  background-color: #00494d;
+  color: #f4fafa;
+  text-align: center;
+  border-radius: .2em;
+}
+
+.tip-section .tip-value:hover {
+  background-color: #c5e4e7;
+  cursor: pointer;
+  color: #00494d;
+}
+
+.tip-section .custom-tip-value {
+  outline: none;
+  border: none;
+  width: 145px;
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  font-weight: 700;
+  text-align: center;
+  padding-right: 0.5em;
+}
+
+.tip-section .custom-tip-value:hover {
+  cursor: pointer;
+}
+
+.wrapper-summarySection {
+  background-color: #00494d;
+  border-radius: .5em;
+  padding: 1.7em 1em 1em 1em;
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+}
+
+.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.summary .summary-text-addInfo {
+  font-size: .5em;
+  color: #7f9c9f;
+}
+
+.summary .summary-text-description {
+  font-size: .6em;
+  font-weight: 700;
+  color: #f4fafa;
+}
+
+.summary span {
+  font-weight: 700;
+  color: #26c0ab;
+}
+
+.resetButton {
+  text-align: center;
+  background-color: #26c0ab;
+  border-radius: .2em;
+  font-weight: 700;
+  color: #00494d;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.resetButton:hover {
+  background-color: #c5e4e7;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .container {
+    -ms-grid-columns: 800px;
+        grid-template-columns: 800px;
+  }
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    border-radius: 1em;
+  }
+  .summary {
+    margin-bottom: 2em;
+  }
+  .wrapper-summarySection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1em;
+  }
+  .tip-section .custom-tip-value {
+    width: 160px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
